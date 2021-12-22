@@ -6,11 +6,14 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
 }
 
 .header {
     padding: 100px 0 60px 0;
+}
+
+.main {
+    padding-bottom: 96px;
 }
 
 .heading {
@@ -51,4 +54,50 @@ body {
         position: absolute;
         left: 0;
     }
+}
+
+.list-group-item {
+    margin-bottom: 10px;
+    border: 1px solid #434a50;
+    background-color: rgba(15, 15, 24, 0.8);
+    &:first-child {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+.list-number {
+    font-size: 40px;
+    color: #607878;
+}
+
+.list-players {
+    font-size: 32px;
+    color: #aec3c3;
+}
+
+.list-name {
+    font-size: 26px;
+    color: #aec3c3;
+}
+
+.page-item {
+    .page-link {
+        background-color: rgba(61, 65, 76, 0.8);
+        border: 1px solid #696770;
+        color: #cecfd2;
+        padding: 6px 24px;
+        margin: 0 20px;
+    }
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 0;
 }

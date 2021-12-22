@@ -172,7 +172,30 @@ body {
   color: #9aaaad;
 }
 
-.list-group-item {
+@media (min-width: 992px) {
+  .players-list {
+    max-height: max(calc(100vh - 590px), 500px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .players-list::-webkit-scrollbar {
+    width: 32px;
+    height: 8px;
+    margin-left: -10px;
+  }
+  .players-list::-webkit-scrollbar-track {
+    border-left: 18px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    background-color: rgba(4, 9, 13, 0.5);
+  }
+  .players-list::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    border-left: 18px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    background-color: white;
+  }
+}
+.players-list .list-group-item {
   margin-bottom: 5px;
   border: 1px solid #434a50;
   background-color: rgba(15, 15, 24, 0.8);
@@ -180,37 +203,37 @@ body {
   padding-bottom: 0;
   position: relative;
 }
-.list-group-item .list-number {
+.players-list .list-group-item .list-number {
   font-size: 38px;
   color: #607878;
   padding-left: 1rem;
 }
-.list-group-item .list-players {
+.players-list .list-group-item .list-players {
   font-size: 32px;
   color: #aec3c3;
   padding-left: 1rem;
 }
-.list-group-item .list-name {
+.players-list .list-group-item .list-name {
   font-size: 26px;
   color: #aec3c3;
   padding-left: 1rem;
 }
-.list-group-item .row > div {
+.players-list .list-group-item .row > div {
   display: flex;
   align-items: center;
 }
-.list-group-item .separator-shadow {
+.players-list .list-group-item .separator-shadow {
   background: linear-gradient(45deg, rgba(4, 9, 13, 0.3) 25%, transparent);
 }
-.list-group-item:first-child {
+.players-list .list-group-item:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.list-group-item + .list-group-item {
+.players-list .list-group-item + .list-group-item {
   border-top-width: 1px;
 }
 @media (min-width: 992px) {
-  .list-group-item:before {
+  .players-list .list-group-item:before {
     content: "";
     position: absolute;
     background-image: url("../images/side-row-decor.svg");
@@ -223,34 +246,34 @@ body {
     z-index: -1;
   }
 }
-.list-group-item.active {
+.players-list .list-group-item.active {
   background: linear-gradient(45deg, rgba(33, 110, 124, 0.5), rgba(56, 91, 126, 0.5));
   border-color: white;
   border-width: 2px !important;
 }
-.list-group-item.primary {
+.players-list .list-group-item.primary {
   background: linear-gradient(45deg, rgba(97, 17, 12, 0.8), rgba(83, 23, 29, 0.3));
   border-color: #9d311f;
   border-width: 2px !important;
 }
-.list-group-item.active .row, .list-group-item.primary .row {
+.players-list .list-group-item.active .row, .players-list .list-group-item.primary .row {
   background-image: url("../images/active-row-pattern.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.list-group-item.active .separator-shadow, .list-group-item.primary .separator-shadow {
+.players-list .list-group-item.active .separator-shadow, .players-list .list-group-item.primary .separator-shadow {
   background: initial;
 }
-.list-group-item.active .list-number, .list-group-item.active .list-players, .list-group-item.active .list-name, .list-group-item.primary .list-number, .list-group-item.primary .list-players, .list-group-item.primary .list-name {
+.players-list .list-group-item.active .list-number, .players-list .list-group-item.active .list-players, .players-list .list-group-item.active .list-name, .players-list .list-group-item.primary .list-number, .players-list .list-group-item.primary .list-players, .players-list .list-group-item.primary .list-name {
   color: white;
 }
-.list-group-item.active .cut-corner-decor:before {
+.players-list .list-group-item.active .cut-corner-decor:before {
   background: linear-gradient(327deg, rgba(71, 119, 134, 0.6), transparent);
 }
-.list-group-item.primary .cut-corner-decor:before {
+.players-list .list-group-item.primary .cut-corner-decor:before {
   background: linear-gradient(324deg, rgba(131, 35, 30, 0.82), transparent);
 }
-.list-group-item:hover {
+.players-list .list-group-item:hover {
   border-color: white;
 }
 

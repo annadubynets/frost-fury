@@ -174,115 +174,147 @@ body {
     color: #9aaaad;
 }
 
-.list-group-item {
-    margin-bottom: 5px;
-    border: 1px solid #434a50;
-    background-color: rgba(15, 15, 24, 0.8);
-    padding-top: 0;
-    padding-bottom: 0;
-    position: relative;
-
-    .list-number {
-        font-size: 38px;
-        color: #607878;
-        padding-left: 1rem;
-    }
-
-    .list-players {
-        font-size: 32px;
-        color: #aec3c3;
-        padding-left: 1rem;
-    }
-    
-    .list-name {
-        font-size: 26px;
-        color: #aec3c3;
-        padding-left: 1rem;
-    }
-
-    .row {
-        &>div {
-            display: flex;
-            align-items: center;
-        }
-    }
-
-    .separator-shadow {
-        background: linear-gradient(45deg, rgba(4, 9, 13, 0.30) 25%, transparent);
-    }
-
-    &:first-child {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-    }
-    &+.list-group-item  {
-        border-top-width: 1px;
-    }
-
+.players-list {
     @media (min-width: 992px) {
-        
-        &:before {
-            content: '';
-            position: absolute;
-            background-image: url('../images/side-row-decor.svg');
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            width: 10px;
-            height: 100%;
-            top: 0;
-            left: -1px;
-            z-index: -1;
+        max-height: max(calc(100vh - 590px), 500px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            width: 32px;
+            height: 8px;
+            margin-left: -10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-left: 18px solid rgba(0, 0, 0, 0);
+
+            background-clip: padding-box;
+            background-color: rgb(4 9 13 / 50%);
+            //background: linear-gradient(45deg, transparent, rgb(4 9 13 / 80%));
+        }
+
+        &::-webkit-scrollbar-thumb {
+            //background: white; 
+            background-clip: padding-box;
+            //border-radius: 10px;
+            border-left: 18px solid rgba(0, 0, 0, 0);
+
+            background-clip: padding-box;
+            background-color: white;
         }
     }
 
-    &.active {
-        background: linear-gradient(45deg, rgba(33, 110, 124, 0.5), rgba(56, 91, 126, 0.5));
+    .list-group-item {
+        margin-bottom: 5px;
+        border: 1px solid #434a50;
+        background-color: rgba(15, 15, 24, 0.8);
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative;
 
-        border-color: white;
-        border-width: 2px!important;
-    }
+        .list-number {
+            font-size: 38px;
+            color: #607878;
+            padding-left: 1rem;
+        }
 
-    &.primary {
-        background: linear-gradient(45deg, rgba(97, 17, 12, 0.8), rgba(83, 23, 29, 0.3));
+        .list-players {
+            font-size: 32px;
+            color: #aec3c3;
+            padding-left: 1rem;
+        }
+        
+        .list-name {
+            font-size: 26px;
+            color: #aec3c3;
+            padding-left: 1rem;
+        }
 
-        border-color: rgb(157, 49, 31);
-        border-width: 2px!important;
-    }
-
-    &.active, &.primary {
         .row {
-            background-image: url('../images/active-row-pattern.png');
-            background-repeat: no-repeat;
-            background-size: cover;
+            &>div {
+                display: flex;
+                align-items: center;
+            }
         }
 
         .separator-shadow {
-            background: initial;
+            background: linear-gradient(45deg, rgba(4, 9, 13, 0.30) 25%, transparent);
         }
 
-        .list-number, .list-players, .list-name {
-            color: white;
+        &:first-child {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
         }
-    }
+        &+.list-group-item  {
+            border-top-width: 1px;
+        }
 
-    &.active {
-        .cut-corner-decor {
+        @media (min-width: 992px) {
+            
             &:before {
-                background: linear-gradient(327deg, rgb(71 119 134 / 60%), transparent);
+                content: '';
+                position: absolute;
+                background-image: url('../images/side-row-decor.svg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 10px;
+                height: 100%;
+                top: 0;
+                left: -1px;
+                z-index: -1;
             }
         }
-    }
 
-    &.primary {
-        .cut-corner-decor {
-            &:before {
-                background: linear-gradient(324deg, rgb(131 35 30 / 82%), transparent);
+        &.active {
+            background: linear-gradient(45deg, rgba(33, 110, 124, 0.5), rgba(56, 91, 126, 0.5));
+
+            border-color: white;
+            border-width: 2px!important;
+        }
+
+        &.primary {
+            background: linear-gradient(45deg, rgba(97, 17, 12, 0.8), rgba(83, 23, 29, 0.3));
+
+            border-color: rgb(157, 49, 31);
+            border-width: 2px!important;
+        }
+
+        &.active, &.primary {
+            .row {
+                background-image: url('../images/active-row-pattern.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .separator-shadow {
+                background: initial;
+            }
+
+            .list-number, .list-players, .list-name {
+                color: white;
             }
         }
-    }
 
-    &:hover {
-        border-color: white;
+        &.active {
+            .cut-corner-decor {
+                &:before {
+                    background: linear-gradient(327deg, rgb(71 119 134 / 60%), transparent);
+                }
+            }
+        }
+
+        &.primary {
+            .cut-corner-decor {
+                &:before {
+                    background: linear-gradient(324deg, rgb(131 35 30 / 82%), transparent);
+                }
+            }
+        }
+
+        &:hover {
+            border-color: white;
+        }
     }
 }
 

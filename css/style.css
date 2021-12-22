@@ -24,37 +24,109 @@ body {
 }
 
 .header {
-  padding: 100px 0 60px 0;
+  padding: 100px 0 0px 0;
 }
-
-.main {
-  padding-bottom: 96px;
-}
-
-.heading {
+.header .heading {
   position: relative;
 }
-.heading::before {
+.header .heading::before {
   content: "";
   display: block;
   background-image: url("../images/heading-line-prev.png");
+  background-size: contain;
   background-repeat: no-repeat;
-  width: 349px;
+  width: 37%;
   height: 13px;
   position: absolute;
   left: -70px;
   top: 17px;
 }
-.heading::after {
+.header .heading::after {
   content: "";
   display: block;
   background-image: url("../images/heading-line-next.png");
+  background-size: contain;
   background-repeat: no-repeat;
-  width: 349px;
+  width: 37%;
   height: 13px;
   position: absolute;
   right: -70px;
   top: 17px;
+}
+.header .navbar-brand-left {
+  position: relative;
+  top: -54px;
+  left: -80px;
+}
+.header .navbar-brand-left img {
+  min-width: 100%;
+  max-width: max(100%, 380px);
+}
+.header .navbar-brand-right {
+  position: relative;
+  top: -56px;
+}
+.header .navbar-brand-right img {
+  min-width: 100%;
+  max-width: max(100%, 410px);
+}
+@media (max-width: 1499px) {
+  .header .navbar-brand-left {
+    top: -50px;
+    left: -80px;
+  }
+  .header .navbar-brand-left img {
+    max-width: max(100%, 380px);
+  }
+  .header .navbar-brand-right {
+    position: relative;
+    top: -40px;
+  }
+  .header .navbar-brand-right img {
+    max-width: max(100%, 344px);
+  }
+}
+@media (max-width: 1314px) {
+  .header .navbar-brand-left {
+    top: -40px;
+    left: -60px;
+  }
+  .header .navbar-brand-left img {
+    max-width: max(100%, 290px);
+  }
+  .header .navbar-brand-right {
+    position: relative;
+    top: -30px;
+  }
+  .header .navbar-brand-right img {
+    max-width: max(100%, 290px);
+  }
+}
+@media (max-width: 1200px) {
+  .header .navbar-brand-left {
+    top: -40px;
+    left: -60px;
+  }
+  .header .navbar-brand-left img {
+    max-width: max(100%, 290px);
+  }
+  .header .navbar-brand-right {
+    position: relative;
+    top: -30px;
+  }
+  .header .navbar-brand-right img {
+    max-width: max(100%, 230px);
+  }
+  .header .hero-label {
+    font-size: 70px;
+  }
+  .header .hero-label + .heading {
+    font-size: 30px;
+  }
+}
+
+.main {
+  padding-bottom: 96px;
 }
 
 .title {
@@ -81,6 +153,9 @@ body {
 .list-group-item:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.list-group-item + .list-group-item {
+  border-top-width: 1px;
 }
 
 .list-number {

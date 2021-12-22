@@ -204,7 +204,6 @@ body {
         &>div {
             display: flex;
             align-items: center;
-            padding: 3px 0;
         }
     }
 
@@ -330,5 +329,47 @@ body {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         margin-right: 0;
+    }
+}
+
+.search-form {
+    background-color: #12121f;
+    border: 1px solid #434a50;
+
+    .form-control {
+        background-color: transparent;
+        border-radius: 0;
+        padding: 10px 1rem;
+        font-size: 26px;
+        border: none;
+        color: white;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .input-group-text {
+        padding-left: 45px;
+        padding-right: 25px;
+        border-radius: 0;
+        border: none;
+        position: relative;
+        background-color: transparent;
+        button {
+            color: white;
+            font-size: 30px;
+            padding: 0px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: -0;
+            top: 0;
+            width: 100%;
+            min-height: 100%;
+            -webkit-clip-path: polygon(32% 0%, 0% 90%, 0% 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(32% 0%, 0% 90%, 0% 100%, 100% 100%, 100% 0%);
+            background: linear-gradient(136deg, rgb(53 111 131 / 78%), transparent);
+        }
     }
 }

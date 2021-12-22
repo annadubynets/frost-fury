@@ -15,6 +15,11 @@ h3 {
   color: #90a0b8;
 }
 
+h4 {
+  font-size: 38px;
+  color: #ffffff;
+}
+
 body {
   font-family: "Rajdhani";
   background-image: url("../images/bg.png");
@@ -131,6 +136,7 @@ body {
 
 .title {
   position: relative;
+  min-height: 72px;
 }
 .title::after {
   content: "";
@@ -143,6 +149,7 @@ body {
   height: 100%;
   position: absolute;
   left: 0;
+  bottom: -45px;
 }
 
 .list-group-item {

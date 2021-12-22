@@ -137,6 +137,7 @@ body {
 
 .title {
     position: relative;
+    min-height: 72px;
     &::after {
         content: "";
         display: block;
@@ -148,6 +149,7 @@ body {
         height: 100%;
         position: absolute;
         left: 0;
+        bottom: -45px;
     }
 }
 

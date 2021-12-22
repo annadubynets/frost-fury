@@ -1,0 +1,71 @@
+@import "fonts.css";
+h1 {
+  font-size: 80px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 60px;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 42px;
+  color: #90a0b8;
+}
+
+body {
+  font-family: "Rajdhani";
+  background-image: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header {
+  padding: 100px 0 60px 0;
+}
+
+.heading {
+  position: relative;
+}
+.heading::before {
+  content: "";
+  display: block;
+  background-image: url("../images/heading-line-prev.png");
+  background-repeat: no-repeat;
+  width: 349px;
+  height: 13px;
+  position: absolute;
+  left: -70px;
+  top: 17px;
+}
+.heading::after {
+  content: "";
+  display: block;
+  background-image: url("../images/heading-line-next.png");
+  background-repeat: no-repeat;
+  width: 349px;
+  height: 13px;
+  position: absolute;
+  right: -70px;
+  top: 17px;
+}
+
+.title {
+  position: relative;
+}
+.title::after {
+  content: "";
+  display: block;
+  background-image: url("../images/line.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

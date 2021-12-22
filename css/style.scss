@@ -49,6 +49,8 @@ body {
         display: block;
         background-image: url('../images/line.png');
         background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -81,23 +83,52 @@ body {
     color: #aec3c3;
 }
 
-.page-item {
-    .page-link {
-        background-color: rgba(61, 65, 76, 0.8);
-        border: 1px solid #696770;
-        color: #cecfd2;
-        padding: 6px 24px;
-        margin: 0 20px;
+.color-gray {
+    color: #9aaaad;
+}
+
+.pagination {
+
+    .page-item {
+        .page-link {
+            background-color: rgba(61, 65, 76, 0.4);
+            border: 1px solid #696770;
+            color: #cecfd2;
+            padding: 0.25rem 24px;
+            min-height: 16px;
+
+            &.prev-link {
+                padding-left: 12px;
+                padding-right: 32px;
+            }
+
+            &.next-link {
+                padding-left: 32px;
+                padding-right: 12px;
+            }
+        
+            span.control {
+                display: grid;
+                place-items: center;
+                min-height: 24px;
+                @extend .color-gray;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        
+        }
     }
-}
 
-.page-item:first-child .page-link {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
+    .page-item:first-child .page-link {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 
-.page-item:last-child .page-link {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-right: 0;
+    .page-item:last-child .page-link {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-right: 0;
+    }
 }

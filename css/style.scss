@@ -153,10 +153,65 @@ body {
     }
 }
 
+@media (min-width: 992px) {
+    .cut-corner-decor {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 0;
+            width: 100%;
+            min-height: 100%;
+            -webkit-clip-path: polygon(0% 0%, 0 100%, 55% 100%, 80% 0%);
+            clip-path: polygon(0% 0%, 0 100%, 55% 100%, 80% 0%);
+            background: linear-gradient(327deg, rgb(44 44 82 / 60%), transparent);
+        }
+    }
+}
+
+.color-gray {
+    color: #9aaaad;
+}
+
 .list-group-item {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border: 1px solid #434a50;
     background-color: rgba(15, 15, 24, 0.8);
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+
+    .list-number {
+        font-size: 38px;
+        color: #607878;
+        padding-left: 1rem;
+    }
+
+    .list-players {
+        font-size: 32px;
+        color: #aec3c3;
+        padding-left: 1rem;
+    }
+    
+    .list-name {
+        font-size: 26px;
+        color: #aec3c3;
+        padding-left: 1rem;
+    }
+
+    .row {
+        &>div {
+            display: flex;
+            align-items: center;
+            padding: 3px 0;
+        }
+    }
+
+    .separator-shadow {
+        background: linear-gradient(45deg, rgba(4, 9, 13, 0.30) 25%, transparent);
+    }
+
     &:first-child {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -164,26 +219,74 @@ body {
     &+.list-group-item  {
         border-top-width: 1px;
     }
+
+    @media (min-width: 992px) {
+        
+        &:before {
+            content: '';
+            position: absolute;
+            background-image: url('../images/side-row-decor.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 10px;
+            height: 100%;
+            top: 0;
+            left: -1px;
+            z-index: -1;
+        }
+    }
+
+    &.active {
+        background: linear-gradient(45deg, rgba(33, 110, 124, 0.5), rgba(56, 91, 126, 0.5));
+
+        border-color: white;
+        border-width: 2px!important;
+    }
+
+    &.primary {
+        background: linear-gradient(45deg, rgba(97, 17, 12, 0.8), rgba(83, 23, 29, 0.3));
+
+        border-color: rgb(157, 49, 31);
+        border-width: 2px!important;
+    }
+
+    &.active, &.primary {
+        .row {
+            background-image: url('../images/active-row-pattern.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .separator-shadow {
+            background: initial;
+        }
+
+        .list-number, .list-players, .list-name {
+            color: white;
+        }
+    }
+
+    &.active {
+        .cut-corner-decor {
+            &:before {
+                background: linear-gradient(327deg, rgb(71 119 134 / 60%), transparent);
+            }
+        }
+    }
+
+    &.primary {
+        .cut-corner-decor {
+            &:before {
+                background: linear-gradient(324deg, rgb(131 35 30 / 82%), transparent);
+            }
+        }
+    }
+
+    &:hover {
+        border-color: white;
+    }
 }
 
-.list-number {
-    font-size: 40px;
-    color: #607878;
-}
-
-.list-players {
-    font-size: 32px;
-    color: #aec3c3;
-}
-
-.list-name {
-    font-size: 26px;
-    color: #aec3c3;
-}
-
-.color-gray {
-    color: #9aaaad;
-}
 
 .pagination {
     .page-item {

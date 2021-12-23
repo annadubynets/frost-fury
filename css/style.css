@@ -26,11 +26,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  min-height: 100vh;
 }
 
 .header {
   padding: 100px 0 0px 0;
-  max-height: 290px;
+  max-height: 300px;
 }
 .header .heading {
   position: relative;
@@ -238,7 +239,7 @@ body {
 
 @media (min-width: 992px) {
   .players-list {
-    max-height: max(calc(100vh - 601px), 500px);
+    max-height: max(calc(100vh - 611px), 500px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }

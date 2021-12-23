@@ -36,10 +36,13 @@
     <main class="main">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
-                    <h2 class="title">TOP 1000</h2>
-
-                    <ul class="list-group players-list pt-3 mb-4">
+                <div class="col-lg-8 order-1 order-lg-0">
+                    <div class="title mb-4">
+                        <h2 class="m-0">TOP 1000</h2>
+                        <h4 class="m-0">Data refreshes every 15 minutes</h4>
+                    </div>
+                    
+                    <ul class="list-group players-list mb-4">
                         <li class="list-group-item primary">
                             <div class="row d-flex flex-row">
                                 <div class="col-lg-2 cut-corner-decor">
@@ -195,7 +198,7 @@
                                     <span class="icon-play-skip-forward-sharp-svgrepo-com control"></span>
                                 </a>
                             </li>
-                            <li class="page-item ms-4">
+                            <li class="page-item ms-4 d-none d-md-block">
                                 <a class="page-link" href="#">
                                     <span class="icon-spinner control"></span>
                                 </a>
@@ -204,9 +207,12 @@
                     </nav>
                 </div>
 
-                <div class="col-lg-4 mt-5 mt-lg-0">
-                    <h4 class="title">SEARCH FOR A PLAYER</h4>
-                    <div class="pt-3 pb-4">
+                <div class="col-lg-4 mt-5 mt-lg-0 order-0 order-lg-1">
+                    <div class="title-sm mb-4 d-flex align-items-end">
+                        <h4>SEARCH FOR A PLAYER STEAM NAME</h4>
+                    </div>
+                    
+                    <div class="pb-4">
                         <div class="input-group search-form">
                             <input type="text" class="form-control" aria-label="Player name">
                             <span class="input-group-text" id="basic-addon2"><button class="btn btn-search">GO</button></span>

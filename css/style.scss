@@ -54,10 +54,10 @@ body {
             }
         }
     }
-
+    
     .navbar-brand-left {
         position: relative;
-        top: -54px;
+        top: -77px;
         left: -80px;
 
         img {
@@ -78,7 +78,7 @@ body {
 
     @media (max-width: 1499px) {
         .navbar-brand-left {
-            top: -50px;
+            top: -78px;
             left: -80px;
     
             img {
@@ -98,8 +98,8 @@ body {
 
     @media (max-width: 1314px) {
         .navbar-brand-left {
-            top: -40px;
-            left: -60px;
+            top: -54px;
+            left: -42px;
     
             img {
                 max-width: max(100%, 290px);
@@ -118,8 +118,8 @@ body {
 
     @media (max-width: 1200px) {
         .navbar-brand-left {
-            top: -40px;
-            left: -60px;
+            top: -52px;
+            left: -27px;
     
             img {
                 max-width: max(100%, 290px);
@@ -128,7 +128,8 @@ body {
     
         .navbar-brand-right {
             position: relative;
-            top: -30px;
+            top: -18px;
+            right: 12px;
     
             img {
                 max-width: max(100%, 230px);
@@ -144,9 +145,42 @@ body {
         }
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
+        padding: 0px 0px 0px 0px;
+
+        .navbar-brand-left {
+            top: 0px;
+            left: 0px;
+    
+            img {
+                max-width: 80%;
+                min-width: 80%;
+            };
+        }
+    
+        .navbar-brand-right {
+            top: 10px;
+            right: -14px;
+    
+            img {
+                max-width: 80%;
+                min-width: 80%;
+            };
+        }
+
         .hero-label {
-            font-size: 56px;
+            font-size: 50px;
+
+            &+.heading {
+                font-size: 26px;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        .hero-label {
+            font-size: 48px;
 
             &+.heading {
                 font-size: 24px;
@@ -193,7 +227,13 @@ body {
         &::after {
             right: -10px;
             left: -10px;
-            bottom: -78px;
+            bottom: -68px;
+        }
+    }
+
+    @media (max-width: 412px) {
+        h4 {
+            font-size: 24px;
         }
     }
 }
@@ -238,8 +278,8 @@ body {
             top: 0;
             width: 100%;
             min-height: 100%;
-            -webkit-clip-path: polygon(0% 0%, 0 100%, 55% 100%, 80% 0%);
-            clip-path: polygon(0% 0%, 0 100%, 55% 100%, 80% 0%);
+            -webkit-clip-path: polygon(0% 0%, 0 100%, 65% 100%, 90% 0%);
+            clip-path: polygon(0% 0%, 0 100%, 65% 100%, 90% 0%);
             background: linear-gradient(327deg, rgb(44 44 82 / 60%), transparent);
         }
     }

@@ -74,7 +74,7 @@ body {
 }
 .header .navbar-brand-left {
   position: relative;
-  top: -54px;
+  top: -77px;
   left: -80px;
 }
 .header .navbar-brand-left img {
@@ -91,7 +91,7 @@ body {
 }
 @media (max-width: 1499px) {
   .header .navbar-brand-left {
-    top: -50px;
+    top: -78px;
     left: -80px;
   }
   .header .navbar-brand-left img {
@@ -107,8 +107,8 @@ body {
 }
 @media (max-width: 1314px) {
   .header .navbar-brand-left {
-    top: -40px;
-    left: -60px;
+    top: -54px;
+    left: -42px;
   }
   .header .navbar-brand-left img {
     max-width: max(100%, 290px);
@@ -123,15 +123,16 @@ body {
 }
 @media (max-width: 1200px) {
   .header .navbar-brand-left {
-    top: -40px;
-    left: -60px;
+    top: -52px;
+    left: -27px;
   }
   .header .navbar-brand-left img {
     max-width: max(100%, 290px);
   }
   .header .navbar-brand-right {
     position: relative;
-    top: -30px;
+    top: -18px;
+    right: 12px;
   }
   .header .navbar-brand-right img {
     max-width: max(100%, 230px);
@@ -143,9 +144,36 @@ body {
     font-size: 30px;
   }
 }
+@media (max-width: 992px) {
+  .header {
+    padding: 0px 0px 0px 0px;
+  }
+  .header .navbar-brand-left {
+    top: 0px;
+    left: 0px;
+  }
+  .header .navbar-brand-left img {
+    max-width: 80%;
+    min-width: 80%;
+  }
+  .header .navbar-brand-right {
+    top: 10px;
+    right: -14px;
+  }
+  .header .navbar-brand-right img {
+    max-width: 80%;
+    min-width: 80%;
+  }
+  .header .hero-label {
+    font-size: 50px;
+  }
+  .header .hero-label + .heading {
+    font-size: 26px;
+  }
+}
 @media (max-width: 576px) {
   .header .hero-label {
-    font-size: 56px;
+    font-size: 48px;
   }
   .header .hero-label + .heading {
     font-size: 24px;
@@ -186,7 +214,12 @@ body {
   .title::after, .title-sm::after {
     right: -10px;
     left: -10px;
-    bottom: -78px;
+    bottom: -68px;
+  }
+}
+@media (max-width: 412px) {
+  .title h4, .title-sm h4 {
+    font-size: 24px;
   }
 }
 
@@ -228,8 +261,8 @@ body {
     top: 0;
     width: 100%;
     min-height: 100%;
-    -webkit-clip-path: polygon(0% 0%, 0 100%, 55% 100%, 80% 0%);
-    clip-path: polygon(0% 0%, 0 100%, 55% 100%, 80% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0 100%, 65% 100%, 90% 0%);
+    clip-path: polygon(0% 0%, 0 100%, 65% 100%, 90% 0%);
     background: linear-gradient(327deg, rgba(44, 44, 82, 0.6), transparent);
   }
 }

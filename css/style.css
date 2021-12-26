@@ -328,6 +328,20 @@ body {
   color: #aec3c3;
   padding-left: 1rem;
 }
+@media (max-width: 576px) {
+  .players-list .list-group-item .list-number {
+    font-size: 24px;
+    padding-left: 1rem;
+  }
+  .players-list .list-group-item .list-players {
+    font-size: 24px;
+    padding-left: 1rem;
+  }
+  .players-list .list-group-item .list-name {
+    font-size: 20px;
+    padding-left: 1rem;
+  }
+}
 .players-list .list-group-item .row > div {
   display: flex;
   align-items: center;

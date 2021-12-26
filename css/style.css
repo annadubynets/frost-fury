@@ -218,9 +218,20 @@ body {
     bottom: -68px;
   }
 }
-@media (max-width: 412px) {
+@media (max-width: 576px) {
+  .title h2, .title-sm h2 {
+    font-size: 42px;
+  }
   .title h4, .title-sm h4 {
     font-size: 24px;
+  }
+}
+@media (max-width: 320px) {
+  .title h2, .title-sm h2 {
+    font-size: 38px;
+  }
+  .title h4, .title-sm h4 {
+    font-size: 20px;
   }
 }
 
@@ -363,7 +374,11 @@ body {
 .players-list .list-group-item.active .separator-shadow, .players-list .list-group-item.primary .separator-shadow {
   background: initial;
 }
-.players-list .list-group-item.active .list-number, .players-list .list-group-item.active .list-players, .players-list .list-group-item.active .list-name, .players-list .list-group-item.primary .list-number, .players-list .list-group-item.primary .list-players, .players-list .list-group-item.primary .list-name {
+.players-list .list-group-item.active .list-number,
+.players-list .list-group-item.active .list-players,
+.players-list .list-group-item.active .list-name, .players-list .list-group-item.primary .list-number,
+.players-list .list-group-item.primary .list-players,
+.players-list .list-group-item.primary .list-name {
   color: white;
 }
 .players-list .list-group-item.active .cut-corner-decor:before {
@@ -399,6 +414,16 @@ body {
   .pagination .page-item .page-link.next-link {
     padding-left: 12px;
     padding-right: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .pagination .page-item .page-link.prev-link {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .pagination .page-item .page-link.next-link {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 .pagination .page-item .page-link span.control {

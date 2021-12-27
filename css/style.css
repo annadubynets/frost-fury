@@ -111,7 +111,7 @@ body {
 }
 .header .navbar-brand-right img {
   min-width: 100%;
-  max-width: max(100%, 410px);
+  max-width: max(100%, 390px);
 }
 @media (max-width: 1499px) {
   .header .navbar-brand-left {

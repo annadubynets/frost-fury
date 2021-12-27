@@ -31,11 +31,12 @@ body {
             background-image: url('../images/heading-line-prev.png');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 37%;
+            background-position: right;
+            width: 30%;
             height: 13px;
             position: absolute;
-            left: -70px;
-            top: 17px;
+            left: -15%;
+            top: calc(50% - 6px);
         }
         &::after {
             content: "";
@@ -43,24 +44,37 @@ body {
             background-image: url('../images/heading-line-next.png');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 37%;
+            width: 30%;
             height: 13px;
             position: absolute;
-            right: -70px;
-            top: 17px;
+            right: -15%;
+            top: calc(50% - 6px);
         }
+        
+
         @media (max-width: 991px) {
             &::before {
-                width: 20%;
-                left: 0px;
+                width: 15%;
+                left: -0.5rem;
                 top: 17px;
             }
             &::after {
-                width: 20%;
-                right: 0px;
+                width: 15%;
+                right: -0.5rem;
                 top: 17px;
             }
+
+            @media (min-width: 767px) {
+                &::before {
+                    width: 25%;
+                }
+                &::after {
+                    width: 25%;
+                }
+            }
         }
+
+        
     }
     .navbar-brand-left {
         position: relative;
@@ -222,12 +236,15 @@ body {
             font-size: 24px;
         }
     }
-    @media (max-width: 320px) {
+    @media (max-width: 375px) {
         h2 {
             font-size: 38px;
         }
         h4 {
             font-size: 20px;
+        }
+        &::after {
+            bottom: -60px;
         }
     }
 }

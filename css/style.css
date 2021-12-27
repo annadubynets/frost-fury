@@ -59,11 +59,12 @@ body {
   background-image: url("../images/heading-line-prev.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 37%;
+  background-position: right;
+  width: 30%;
   height: 13px;
   position: absolute;
-  left: -70px;
-  top: 17px;
+  left: -15%;
+  top: calc(50% - 6px);
 }
 .header .heading::after {
   content: "";
@@ -71,22 +72,30 @@ body {
   background-image: url("../images/heading-line-next.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 37%;
+  width: 30%;
   height: 13px;
   position: absolute;
-  right: -70px;
-  top: 17px;
+  right: -15%;
+  top: calc(50% - 6px);
 }
 @media (max-width: 991px) {
   .header .heading::before {
-    width: 20%;
-    left: 0px;
+    width: 15%;
+    left: -0.5rem;
     top: 17px;
   }
   .header .heading::after {
-    width: 20%;
-    right: 0px;
+    width: 15%;
+    right: -0.5rem;
     top: 17px;
+  }
+}
+@media (max-width: 991px) and (min-width: 767px) {
+  .header .heading::before {
+    width: 25%;
+  }
+  .header .heading::after {
+    width: 25%;
   }
 }
 .header .navbar-brand-left {
@@ -242,12 +251,15 @@ body {
     font-size: 24px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .title h2, .title-sm h2 {
     font-size: 38px;
   }
   .title h4, .title-sm h4 {
     font-size: 20px;
+  }
+  .title::after, .title-sm::after {
+    bottom: -60px;
   }
 }
 

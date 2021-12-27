@@ -82,12 +82,10 @@ body {
   .header .heading::before {
     width: 15%;
     left: -0.5rem;
-    top: 17px;
   }
   .header .heading::after {
     width: 15%;
     right: -0.5rem;
-    top: 17px;
   }
 }
 @media (max-width: 991px) and (min-width: 767px) {

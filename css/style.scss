@@ -56,12 +56,10 @@ body {
             &::before {
                 width: 15%;
                 left: -0.5rem;
-                top: 17px;
             }
             &::after {
                 width: 15%;
                 right: -0.5rem;
-                top: 17px;
             }
 
             @media (min-width: 767px) {

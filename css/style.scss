@@ -9,7 +9,7 @@ body {
     @media (max-width: 414px) {
         background-image: url('../images/bg-mobile.jpeg');
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 991px) {
         background-image: url('../images/bg-mobile.jpeg');
     }
     background-repeat: no-repeat;
@@ -23,7 +23,6 @@ body {
 .header {
     padding: 100px 0 0px 0;
     max-height: 300px;
-
     .heading {
         position: relative;
         &::before {
@@ -50,9 +49,7 @@ body {
             right: -70px;
             top: 17px;
         }
-
         @media (max-width: 991px) {
-
             &::before {
                 width: 20%;
                 left: 0px;
@@ -65,134 +62,116 @@ body {
             }
         }
     }
-    
     .navbar-brand-left {
         position: relative;
         top: -77px;
         left: -80px;
-
         img {
             min-width: 100%;
             max-width: max(100%, 380px);
-        };
+        }
+        ;
     }
-
     .navbar-brand-right {
         position: relative;
         top: -56px;
-
         img {
             min-width: 100%;
             max-width: max(100%, 410px);
-        };
+        }
+        ;
     }
-
     @media (max-width: 1499px) {
         .navbar-brand-left {
             top: -78px;
             left: -80px;
-    
             img {
                 max-width: max(100%, 380px);
-            };
+            }
+            ;
         }
-    
         .navbar-brand-right {
             position: relative;
             top: -40px;
-    
             img {
                 max-width: max(100%, 344px);
-            };
+            }
+            ;
         }
     }
-
     @media (max-width: 1314px) {
         .navbar-brand-left {
             top: -54px;
             left: -42px;
-    
             img {
                 max-width: max(100%, 290px);
-            };
+            }
+            ;
         }
-    
         .navbar-brand-right {
             position: relative;
             top: -30px;
-    
             img {
                 max-width: max(100%, 290px);
-            };
+            }
+            ;
         }
     }
-
     @media (max-width: 1200px) {
         .navbar-brand-left {
             top: -52px;
             left: -27px;
-    
             img {
                 max-width: max(100%, 290px);
-            };
+            }
+            ;
         }
-    
         .navbar-brand-right {
             position: relative;
             top: -18px;
             right: 12px;
-    
             img {
                 max-width: max(100%, 230px);
-            };
+            }
+            ;
         }
-
         .hero-label {
             font-size: 70px;
-
             &+.heading {
                 font-size: 30px;
             }
         }
     }
-
     @media (max-width: 992px) {
         padding: 0px 0px 0px 0px;
-
         .navbar-brand-left {
             top: 0px;
             left: 0px;
-    
             img {
                 max-width: 80%;
                 min-width: 80%;
-            };
+            }
+            ;
         }
-    
         .navbar-brand-right {
             top: 10px;
             right: -14px;
-    
             img {
                 max-width: 80%;
                 min-width: 80%;
-            };
+            }
+            ;
         }
-
         .hero-label {
             font-size: 50px;
-
             &+.heading {
                 font-size: 26px;
             }
         }
     }
-
     @media (max-width: 576px) {
-
         .hero-label {
             font-size: 48px;
-
             &+.heading {
                 font-size: 24px;
             }
@@ -203,8 +182,6 @@ body {
 .main {
     padding-bottom: 96px;
 }
-
-
 
 .title {
     position: relative;
@@ -223,28 +200,34 @@ body {
         right: -100px;
         left: -21px;
     }
-
     h4 {
         font-size: 28px;
     }
-
     @media (max-width: 991px) {
         min-height: initial;
-
         h2 {
             font-size: 50px;
         }
-
         &::after {
             right: -10px;
             left: -10px;
             bottom: -68px;
         }
     }
-
-    @media (max-width: 412px) {
+    @media (max-width: 576px) {
+        h2 {
+            font-size: 42px;
+        }
         h4 {
             font-size: 24px;
+        }
+    }
+    @media (max-width: 320px) {
+        h2 {
+            font-size: 38px;
+        }
+        h4 {
+            font-size: 20px;
         }
     }
 }
@@ -257,19 +240,15 @@ body {
         bottom: -97px;
         right: -15px;
     }
-
     @media (max-width: 991px) {
         min-height: initial;
-
         &::after {
             bottom: -120px;
             min-height: 126px;
         }
     }
-
     @media (max-width: 567px) {
         min-height: initial;
-
         &::after {
             bottom: -105px;
             min-height: 126px;
@@ -305,32 +284,26 @@ body {
         max-height: max(calc(100vh - 611px), 500px);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-
         &::-webkit-scrollbar {
             width: 32px;
             height: 8px;
             margin-left: -10px;
         }
-
         &::-webkit-scrollbar-track {
             border-left: 18px solid rgba(0, 0, 0, 0);
-
             background-clip: padding-box;
             background-color: rgb(4 9 13 / 50%);
             //background: linear-gradient(45deg, transparent, rgb(4 9 13 / 80%));
         }
-
         &::-webkit-scrollbar-thumb {
             //background: white; 
             background-clip: padding-box;
             //border-radius: 10px;
             border-left: 18px solid rgba(0, 0, 0, 0);
-
             background-clip: padding-box;
             background-color: white;
         }
     }
-
     .list-group-item {
         margin-bottom: 5px;
         border: 1px solid #434a50;
@@ -338,46 +311,60 @@ body {
         padding-top: 0;
         padding-bottom: 0;
         position: relative;
-
         .list-number {
             font-size: 38px;
             color: #607878;
             padding-left: 1rem;
         }
-
         .list-players {
             font-size: 32px;
             color: #aec3c3;
             padding-left: 1rem;
         }
-        
         .list-name {
             font-size: 26px;
             color: #aec3c3;
             padding-left: 1rem;
         }
-
+        @media (max-width: 992px) {
+            .list-number {
+                padding-left: 0;
+            }
+            .list-players {
+                padding-left: 0;
+            }
+            .list-name {
+                padding-left: 0;
+            }
+        }
+        @media (max-width: 576px) {
+            .list-number {
+                font-size: 24px;
+            }
+            .list-players {
+                font-size: 24px;
+            }
+            .list-name {
+                font-size: 20px;
+            }
+        }
         .row {
             &>div {
                 display: flex;
                 align-items: center;
             }
         }
-
         .separator-shadow {
             background: linear-gradient(45deg, rgba(4, 9, 13, 0.30) 25%, transparent);
         }
-
         &:first-child {
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
-        &+.list-group-item  {
+        &+.list-group-item {
             border-top-width: 1px;
         }
-
         @media (min-width: 992px) {
-            
             &:before {
                 content: '';
                 position: absolute;
@@ -391,37 +378,32 @@ body {
                 z-index: -1;
             }
         }
-
         &.active {
             background: linear-gradient(45deg, rgba(33, 110, 124, 0.5), rgba(56, 91, 126, 0.5));
-
             border-color: white;
             border-width: 2px!important;
         }
-
         &.primary {
             background: linear-gradient(45deg, rgba(97, 17, 12, 0.8), rgba(83, 23, 29, 0.3));
-
             border-color: rgb(157, 49, 31);
             border-width: 2px!important;
         }
-
-        &.active, &.primary {
+        &.active,
+        &.primary {
             .row {
                 background-image: url('../images/active-row-pattern.png');
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-
             .separator-shadow {
                 background: initial;
             }
-
-            .list-number, .list-players, .list-name {
+            .list-number,
+            .list-players,
+            .list-name {
                 color: white;
             }
         }
-
         &.active {
             .cut-corner-decor {
                 &:before {
@@ -429,7 +411,6 @@ body {
                 }
             }
         }
-
         &.primary {
             .cut-corner-decor {
                 &:before {
@@ -437,13 +418,11 @@ body {
                 }
             }
         }
-
         &:hover {
             border-color: white;
         }
     }
 }
-
 
 .pagination {
     .page-item {
@@ -453,48 +432,49 @@ body {
             color: #cecfd2;
             padding: 0.25rem 24px;
             min-height: 16px;
-
             &.prev-link {
                 padding-left: 12px;
                 padding-right: 32px;
             }
-
             &.next-link {
                 padding-left: 32px;
                 padding-right: 12px;
             }
-
             @media (max-width: 991px) {
                 &.prev-link {
                     padding-left: 12px;
                     padding-right: 12px;
                 }
-    
                 &.next-link {
                     padding-left: 12px;
                     padding-right: 12px;
                 }
             }
-        
+            @media (max-width: 320px) {
+                &.prev-link {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+                &.next-link {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+            }
             span.control {
                 display: grid;
                 place-items: center;
                 min-height: 24px;
                 @extend .color-gray;
             }
-
             &:focus {
                 box-shadow: none;
             }
-        
         }
     }
-
     .page-item:first-child .page-link {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
-
     .page-item:last-child .page-link {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
@@ -505,7 +485,6 @@ body {
 .search-form {
     background-color: #12121f;
     border: 1px solid #434a50;
-
     .form-control {
         background-color: transparent;
         border-radius: 0;
@@ -517,7 +496,6 @@ body {
             box-shadow: none;
         }
     }
-
     .input-group-text {
         padding-left: 45px;
         padding-right: 25px;
